@@ -1,0 +1,35 @@
+dotnet-cmd
+
+-> to create project
+dotnet new console
+
+-> to run project
+dotnet run
+dotnet run --project src\GradeBook
+
+
+-> dotnet run (dotnet restore + dotnet build)
+dotnet restore (to grab all dependencies)
+	Restore completed in 34.13 ms for C:\dev\repo\c_sharp\c_sharp_fundamentals\src\GradeBook\GradeBook.csproj.
+
+dotnet build (to compile c# code -> produce dll file)
+	Restore completed in 34.56 ms for C:\dev\repo\c_sharp\c_sharp_fundamentals\src\GradeBook\GradeBook.csproj.
+	GradeBook -> C:\dev\repo\c_sharp\c_sharp_fundamentals\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.dll
+
+to run dll file
+	dotnet bin\Debug\netcoreapp3.1\GradeBook.dll
+
+
+
+dotnet new xunit
+-- to add reference of project
+	dotnet add reference ..\..\src\GradeBook\GradeBook.csproj
+
+
+
+dotnet new sln
+dotnet sln add src/GradeBook\GradeBook.csproj
+dotnet sln add test\Grade.Test\GradeBookTest.csproj
+
+dotnet build
+dotnet test
